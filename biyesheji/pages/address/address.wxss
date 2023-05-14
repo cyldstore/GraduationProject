@@ -1,0 +1,79 @@
+@charset "UTF-8";
+page {
+  padding-bottom: 80px;
+}
+
+.address .address-item {
+  width: 95%;
+  height: 120px;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.address .address-item .info {
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address .address-item .info .address-info {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.address .address-item .info .address-info .user .name {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.address .address-item .info .address-info .user .phone {
+  font-size: 14px;
+}
+
+.address .address-item .info .address-info .useraddress {
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* 指定显示文本的行数 */
+  overflow: hidden;
+  /* 超出隐藏 */
+  text-overflow: ellipsis;
+  /* 超出部分显示省略号 */
+}
+
+.address .address-item .info .edit {
+  padding-right: 10px;
+}
+
+.address .address-item .option {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.address .address-item .option .radio {
+  font-size: 14px;
+}
+
+.button {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  padding-top: 20px;
+}

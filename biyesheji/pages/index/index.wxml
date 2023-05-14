@@ -1,0 +1,100 @@
+<!--index.wxml-->
+<view>
+  <!-- 头部导航栏 -->
+  <navigation-bar isShow="{{false}}">
+    <view bindtap="toMap" class="location">
+      <view class="text">
+        {{location}}
+      </view>
+      <van-icon name="arrow-down" />
+    </view>
+  </navigation-bar>
+
+  <!-- 搜索框 -->
+  <view class="search">
+    <van-search placeholder="请输入搜索关键词" bind:click-input="onClick" disabled="{{true}}" shape="round" input-align="center" background="#f2f2f2" />
+  </view>
+
+  <!-- 轮播图 -->
+  <view class="swiper">
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" indicator-active-color="#fff">
+      <swiper-item wx:if="{{loadingerr}}">
+        <van-image use-error-slot width="100%" height="100%">
+          <text slot="error">图片加载失败</text>
+        </van-image>
+      </swiper-item>
+      <swiper-item wx:for="{{indexSwiper}}" wx:key="swiperId">
+        <image src="{{item.swiperUrl}}" mode="aspectFill" />
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 通知消息 -->
+  <view class="noticeBar">
+    <van-notice-bar left-icon="volume-o" text="毕业设计---预约做饭小程序---陈育林" mode="closeable" />
+  </view>
+
+  <!-- 功能选择 -->
+  <view class="options">
+    <view class="left" bindtap="toFunctionPage" data-name="cook">
+      <image src="/public/optionImg/chushi.png" mode="aspectFill" />
+      <view class="text">菜品选择</view>
+    </view>
+    <!-- <view class="middle" bindtap="toFunctionPage" data-name="personal">
+      <image src="/public/optionImg/shirendingzhi.png" mode="aspectFill" />
+      <view class="text">私人订制</view>
+    </view> -->
+    <view class="right" bindtap="toFunctionPage" data-name="coupon">
+      <image src="/public/optionImg/youhuiquan.png" mode="aspectFill" />
+      <view class="text">优惠券</view>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="divider">
+    <van-divider contentPosition="center" customStyle="color: #FFCC33; border-color: #000; font-size: 20px;" dashed>
+      热销菜品
+    </van-divider>
+  </view>
+
+  <!-- 热门菜品 -->
+  <view class="hotCook" wx:for="{{hotdishes}}" wx:key="dishId" bindtap="chefMessage" data-dishid="{{item.dishId}}">
+    <view class="chef">
+      <view class="avator">
+        <image src="{{item.imageUrl[0]}}" mode="aspectFill" />
+      </view>
+      <view class="info">
+        <view class="name">
+          {{item.name}}
+        </view>
+        <view class="grade">
+          <view class="score">
+            {{item.averageRating}}分
+          </view>
+        </view>
+        <view class="description">
+          {{item.description}}
+        </view>
+        <view class="styles">
+          <view class="style-item" wx:for="{{item.category}}" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+        <view class="price">
+          <span style="font-size: 12px; color: red;">￥</span>
+          <span style="font-size: 20px; color: red;">{{item.price}}</span>起
+        </view>
+      </view>
+      <view class="like">
+        <van-icon name="fire-o" size="40" color="crimson"/>
+      </view>
+    </view>
+    <view class="imgShow">
+      <swiper display-multiple-items="5">
+        <swiper-item wx:for="{{item.imageUrl}}" wx:key="index">
+          <image src="{{item}}" mode="aspectFill" />
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

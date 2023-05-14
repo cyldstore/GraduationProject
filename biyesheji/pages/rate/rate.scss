@@ -1,0 +1,160 @@
+page {
+  padding-bottom: 50px;
+}
+
+.rate {
+  width: 95%;
+  margin: 10px auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px #ccc;
+  overflow: hidden;
+
+  .title {
+    padding: 10px;
+    border-bottom: 1px dashed #000;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .food {
+    padding: 10px;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed #000;
+
+    .img {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+
+      .image {
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-right: 10px;
+
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .name{
+          font-size: 20px;
+          color: red;
+        }
+
+        .category{
+          font-size: 14px;
+          view{
+            border: 1px solid gold;
+            min-width: 3em;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50px;
+            padding: 0 2px;
+            margin-right: 5px;
+          }
+        }
+      }
+
+    }
+
+    .food-rate {
+      margin-top: 10px;
+
+      .taste {
+        display: flex;
+        align-items: center;
+
+        .rate-title {
+          margin-right: 20px;
+          padding-top: 10px;
+        }
+
+        .rate-score {
+          margin-left: 20px;
+          padding-top: 10px;
+          color: gold;
+        }
+      }
+    }
+
+    .text {
+      height: 150px;
+      margin-top: 10px;
+
+      textarea {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        background-color: #ccc;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    }
+
+    .uploaderImg{
+      display: flex;
+      // justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      .uploaderImg-item{
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        position: relative;
+        image{
+          width: 100%;
+          height: 100%;
+        }
+        .delete{
+          position: absolute;
+          background-color: #fff;
+          top: 0px;
+          right: 0px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          line-height: 20px;
+          text-align: center;
+        }
+      }
+      .uploaderImg-item:last-child{
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    .uploader {
+      width: 100%;
+      height: 50px;
+      margin-top: 10px;
+      background-color: #ccc;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+    }
+  }
+}
+
+.button {
+  width: 95%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}

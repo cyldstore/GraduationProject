@@ -1,0 +1,58 @@
+.editor .block {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.editor .block text {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 5em;
+}
+
+.editor .block .input {
+  width: 75%;
+  height: 40px;
+  background-color: #ccc;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.editor .block .input input {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.editor .textarea {
+  width: 75%;
+  background-color: #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.editor .textarea textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 6em;
+  padding: 10px;
+}
+
+.editor .textarea .icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+.button {
+  width: 80%;
+  margin: 30px auto;
+  border-radius: 50px;
+  overflow: hidden;
+}

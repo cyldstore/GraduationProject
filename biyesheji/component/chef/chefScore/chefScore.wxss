@@ -1,0 +1,116 @@
+page {
+  padding-bottom: 50px;
+}
+
+.score {
+  width: 90%;
+  margin: 10px auto;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.score .scroe-item {
+  position: relative;
+}
+
+.score .scroe-item span {
+  width: 5em;
+  padding: 2px;
+  text-align-last: justify;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+
+.score .scroe-item text {
+  position: absolute;
+  right: 15px;
+  top: 2px;
+  font-size: 20px;
+  color: red;
+  font-style: italic;
+}
+
+.score .appraise {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.score .appraise .appraise-item {
+  border-bottom: 1px dashed black;
+  margin-top: 10px;
+}
+
+.score .appraise .appraise-item .user {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+}
+
+.score .appraise .appraise-item .user .avator {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.score .appraise .appraise-item .user .avator image {
+  width: 100%;
+  height: 100%;
+}
+
+.score .appraise .appraise-item .user .user-info {
+  padding-left: 10px;
+}
+
+.score .appraise .appraise-item .user .user-info .name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.score .appraise .appraise-item .user .user-info .time {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.score .appraise .appraise-item .user-score {
+  display: flex;
+}
+
+.score .appraise .appraise-item .user-score span {
+  padding-left: 10px;
+  padding-top: 8px;
+  color: black;
+  font-size: 13px;
+}
+
+.score .appraise .appraise-item .appraise-info {
+  padding: 10px;
+  text-align: justify;
+  text-indent: 2em;
+}
+
+.score .appraise .appraise-item .uploaderImg {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.score .appraise .appraise-item .uploaderImg .uploaderImg-item {
+  width: 200rpx;
+  height: 200rpx;
+  overflow: hidden;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.score .appraise .appraise-item .uploaderImg .uploaderImg-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.score .appraise .appraise-item .uploaderImg .uploaderImg-item:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}

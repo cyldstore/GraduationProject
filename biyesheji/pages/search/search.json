@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-empty": "@vant/weapp/empty/index",
+    "mp-searchbar": "weui-miniprogram/searchbar/searchbar",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-search": "@vant/weapp/search/index"
+  }
+}

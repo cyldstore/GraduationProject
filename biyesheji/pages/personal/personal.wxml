@@ -1,0 +1,99 @@
+<!--pages/personal/personal.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="私人订制"></navigation-bar>
+
+<!-- 头部图片 -->
+<view class="navImg" bindtap="previewImg">
+  <image src="/public/personImg/chushi.webp" mode="aspectFill" />
+</view>
+
+<!-- 预约内容 -->
+<view class="content">
+  <view class="title">
+    私人订制
+  </view>
+  <view class="form">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="time">
+        <text>时间:</text>
+        <view class="border">
+          <picker mode="date" bindchange="dateSelet">
+            <input type="text" placeholder="选择日期" value="{{date}}" name="date" />
+          </picker>
+          <picker mode="time" bindchange="detailTime" start="08:00" end="23:00">
+            <input type="text" placeholder="具体时间(营业时间：8:00 ~ 23:00)" value="{{detailTime}}" name="detailTime"/>
+          </picker>
+        </view>
+      </view>
+      <view class="address">
+        <text>地址:</text>
+        <view class="border">
+          <picker mode="region" bindchange="addressSelect">
+            <input type="text" placeholder="所在地区" value="{{address}}" name="address" />
+          </picker>
+          <input type="text" placeholder="详细地址" name="detailAddress" />
+        </view>
+      </view>
+      <view class="foods">
+        <text>食材准备:</text>
+        <view class="border">
+          <checkbox-group name="foods">
+            <view class="checkbox">
+              <label for="">
+                <checkbox value="用户自带" />用户自带
+              </label>
+              <label for="">
+                <checkbox value="厨师帮代买" />厨师帮代买
+              </label>
+            </view>
+          </checkbox-group>
+        </view>
+      </view>
+      <view class="taste">
+        <text>口味偏好:</text>
+        <view class="border">
+          <checkbox-group name="taste">
+            <view class="checkbox">
+              <label for="">
+                <checkbox value="有小孩" />有小孩
+              </label>
+              <label for="">
+                <checkbox value="有老人" />有老人
+              </label>
+              <label for="">
+                <checkbox value="有孕妇" />有孕妇
+              </label>
+              <label for="">
+                <checkbox value="不吃辣" />不吃辣
+              </label>
+              <label for="">
+                <checkbox value="清淡口味" />清淡口味
+              </label>
+              <label for="" bindtap="onChange">
+                <checkbox value="有忌口" checked="{{isNotice}}" />有忌口
+              </label>
+              <textarea value="" wx:if="{{isNotice}}" placeholder="请输入注意事项" name="notice"/>
+            </view>
+          </checkbox-group>
+        </view>
+      </view>
+      <view class="dish">
+        <text>你想吃的菜品名称:</text>
+        <textarea value="" placeholder="请输入菜品名称" maxlength="-1" name="dish" />
+      </view>
+      <view class="phone">
+        <text>手机号:</text>
+        <input type="number" placeholder="请输入手机号" name="phoneNumber" />
+      </view>
+      <view class="wechat">
+        <text>微信号:</text>
+        <input type="text" placeholder="请输入微信号" name="wechatNumber" />
+      </view>
+
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" type="primary" formType="submit" bindsm>提交</button>
+        <button style="margin: 30rpx 0" formType="reset">重置</button>
+      </view>
+    </form>
+  </view>
+</view>

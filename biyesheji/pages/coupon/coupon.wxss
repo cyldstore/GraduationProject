@@ -1,0 +1,77 @@
+page {
+  background-color: #f2f2f2ec;
+}
+
+.coupon {
+  width: 750rpx;
+}
+
+.coupon ul {
+  list-style: none;
+}
+
+.coupon ul li .coupon-item {
+  width: 718rpx;
+  height: 90px;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 8px auto;
+  display: flex;
+  border-radius: 10px;
+}
+
+.coupon ul li .coupon-item .left {
+  flex: 1;
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.coupon ul li .coupon-item .left .price {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.coupon ul li .coupon-item .left .price span {
+  font-weight: initial;
+  font-size: 12px;
+}
+
+.coupon ul li .coupon-item .left .text {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.coupon ul li .coupon-item .middle {
+  flex: 2;
+  border-right: 1px dashed black;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 12px;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+.coupon ul li .coupon-item .middle .restrict {
+  font-size: 14px;
+  color: black;
+}
+
+.coupon ul li .coupon-item .right {
+  flex: 1;
+  font-size: 13px;
+  position: relative;
+}
+
+.coupon ul li .coupon-item .right text {
+  position: absolute;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

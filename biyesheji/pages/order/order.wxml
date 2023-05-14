@@ -1,0 +1,18 @@
+<!--pages/order/order.wxml-->
+<navigation-bar title="订单" isShow="{{false}}">
+  <van-icon name="balance-list-o" size="32" />
+</navigation-bar>
+
+
+<!-- 标签栏 -->
+<van-tabs active="{{0}}" bind:click="onClick">
+  <van-tab title="未接单" name="{{0}}" >
+    <order-card orders="{{orders}}"></order-card>
+  </van-tab>
+  <van-tab title="已接单" name="{{1}}">
+    <order-card state="已接单" icon="balance-list-o" color="blue" orders="{{orders}}"></order-card>
+  </van-tab>
+  <van-tab title="已完成" name="{{2}}">
+    <order-card state="去评价" icon="passed" color="blue" orders="{{orders}}"></order-card>
+  </van-tab>
+</van-tabs>

@@ -1,0 +1,110 @@
+page {
+  padding-bottom: 50px;
+}
+
+.shopList {
+  width: 750px;
+
+  .shop-item {
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #ccc;
+    transition: all 0s ease;
+    margin-bottom: 10px;
+
+    .left {
+      width: 750rpx;
+      height: 100%;
+      display: flex;
+      position: relative;
+
+      .radio {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background-color: skyblue;
+      }
+
+      .card {
+        display: flex;
+        width: 608rpx;
+        height: 100%;
+
+        .img {
+          width: 130px;
+          height: 140px;
+          padding-left: 5px;
+          border-radius: 20px;
+          overflow: hidden;
+          align-self: center;
+
+          image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .info {
+          width: 338rpx;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding-left: 10px;
+
+          .name{
+            font-size: 20px;
+            color: skyblue;
+            font-style: italic;
+          }
+
+          .des {
+            font-size: 13px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .price{
+            font-size: 13px;
+            color: red;
+            text{
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      .stepper{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+
+    .right {
+      width: 50px;
+      height: 100%;
+      background-color: red;
+      position: relative;
+      border-radius: 0 20px 20px 0;
+      box-shadow: 10px 10px 10px #ccc;
+
+      .delete-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+}

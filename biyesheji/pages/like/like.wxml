@@ -1,0 +1,35 @@
+<!--pages/like/like.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="我的收藏" isShow="{{false}}">
+  <van-icon name="arrow-left" size="25" bind:click="goBack" />
+</navigation-bar>
+
+<!-- 收藏列表 -->
+<!-- 商品列表 -->
+<view class="foodList">
+  <view class="food-item" bindtap="toChef" wx:for="{{favorites}}" wx:key="dishId" data-id="{{item.dishId}}">
+    <view class="img">
+      <image src="{{item.imageUrl[0]}}" mode="aspectFill" />
+    </view>
+    <view class="info">
+      <view class="name">
+        {{item.name}}
+      </view>
+      <view class="tags">
+        <view wx:for="{{item.category}}" wx:key="index">
+          {{item}}
+        </view>
+      </view>
+      <view class="description">
+        {{item.description}}
+      </view>
+      <view class="score">
+        <text>{{item.averageRating}}</text>分
+      </view>
+      <view class="price">
+        <text class="icon">￥</text>
+        <text>{{item.price}}</text>起
+      </view>
+    </view>
+  </view>
+</view>

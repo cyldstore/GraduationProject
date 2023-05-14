@@ -1,0 +1,190 @@
+page {
+  background-color: #f2f2f2ec;
+  padding-bottom: 2px;
+}
+
+.location {
+  display: flex;
+
+  .text {
+    width: 200rpx;
+    height: 16px;
+    line-height: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.search {
+  position: fixed;
+  top: 75px;
+  width: 100%;
+  z-index: 100;
+}
+
+swiper {
+  margin-top: 55px;
+  height: 300rpx;
+
+  swiper-item {
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.noticeBar {
+  margin-top: 7px;
+}
+
+.options {
+  margin-top: 7px;
+  // background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+  display: flex;
+  justify-content: space-around;
+  width: 750rpx;
+  height: 75px;
+
+  view {
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 30%;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    image {
+      width: 50px;
+      height: 50px;
+    }
+
+    .text {
+      width: 100%;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      position: absolute;
+      bottom: 5px;
+    }
+  }
+}
+
+.hotCook {
+  background-color: #fff;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+
+  .chef {
+    display: flex;
+    height: 180px;
+    overflow: hidden;
+
+    .avator {
+      // width: 130px;
+      flex: 2;
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .info {
+      padding-left: 10px;
+      display: flex;
+      flex: 3;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .name{
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: tomato;
+      }
+      .grade {
+        display: flex;
+        
+        .score {
+          font-size: 20px;
+          margin-right: 20px;
+          color: gold;
+        }
+      }
+
+      .description {
+        width: 95%;
+        font-size: 12px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        /* 指定显示文本的行数 */
+        overflow: hidden;
+        /* 超出隐藏 */
+        text-overflow: ellipsis;
+        /* 超出部分显示省略号 */
+      }
+
+      .styles {
+        display: flex;
+        flex-wrap: wrap;
+
+        .style-item {
+          border: 1px solid gold;
+          padding: 0 5px;
+          text-align: center;
+          border-radius: 30px;
+          margin-right: 5px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .price {
+        font-size: 12px;
+        color: #ccc;
+      }
+    }
+
+    .like{
+      position: absolute;
+      right: 10px;
+    }
+  }
+
+  .imgShow {
+    width: 100%;
+    height: 60px;
+    margin-top: 15px;
+
+    swiper {
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+
+      swiper-item {
+        image {
+          width: 90%;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .position {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px;
+  }
+}

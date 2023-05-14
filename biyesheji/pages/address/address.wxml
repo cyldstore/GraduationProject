@@ -1,0 +1,41 @@
+<!--pages/address/address.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="地址信息" isShow="{{false}}">
+  <van-icon name="arrow-left" size="25" bind:click="goBack" />
+</navigation-bar>
+
+<!-- 地址信息 -->
+<view class="address" wx:if="{{address.length}}">
+  <view class="address-item" wx:for="{{address}}" wx:key="userAddressId">
+    <view class="info">
+      <view class="address-info" bindtap="{{source=='pay'?'toPay':''}}" data-id="{{item.userAddressId}}" data-index="{{index}}">
+        <view class="user">
+          <text class="name">{{item.addressName}}</text>
+          <text class="phone">{{item.phoneNumber}}</text>
+        </view>
+        <view class="useraddress">
+          {{item.address}}{{item.detailAddress}}
+        </view>
+      </view>
+      <view class="edit" bindtap="toEdit" data-option="修改地址" data-id="{{item.userAddressId}}">
+        <van-icon name="edit" size="25"/>
+      </view>
+    </view>
+    <view class="option">
+      <view class="radio" catchtap="isDefault" data-id="{{item.userAddressId}}" data-index="{{index}}">
+        <label for="">
+          <radio value="默认地址" checked="{{item.isDefault}}"/>默认地址
+        </label>
+      </view>
+      <view class="delete" bindtap="delete" data-id="{{item.userAddressId}}">
+        删除
+      </view>
+    </view>
+  </view>
+</view>
+
+<van-empty description="还没有添加地址，快去添加吧！" image="search" wx:if="{{!address.length}}"/>
+
+<view class="button">
+  <van-button type="primary" size="large" round bind:click="toEdit" data-option="添加地址">+ 添加地址</van-button>
+</view>

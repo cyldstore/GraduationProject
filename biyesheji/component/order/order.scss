@@ -1,0 +1,79 @@
+.order {
+  width: 95%;
+  height: 150px;
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #ccc;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .img {
+    height: 130px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-left: 10px;
+    flex: 1;
+
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .info {
+    height: 100%;
+    margin: 10px;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .name {
+      width: 80%;
+      font-size: 20px;
+      color: red;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      /* 指定显示文本的行数 */
+      overflow: hidden;
+      /* 超出隐藏 */
+      text-overflow: ellipsis;
+      /* 超出部分显示省略号 */
+    }
+
+    .createtime {
+      font-size: 14px;
+    }
+
+    .ordertime {
+      font-size: 14px;
+    }
+
+    .price {
+      color: rgb(245, 218, 67);
+
+      text {
+        font-size: 20px;
+
+      }
+    }
+  }
+
+  .state {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: skyblue;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

@@ -1,0 +1,66 @@
+<!--pages/rate/rate.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="评价" isShow="{{false}}">
+  <van-icon name="arrow-left" size="25" bind:click="goBack" />
+</navigation-bar>
+
+<!-- 通知栏 -->
+<van-notice-bar left-icon="chat-o" text="提交评价或建议，鼓励商家做得更好。" />
+
+<!-- 评价 -->
+<view class="rate">
+  <view class="title">
+    您对菜品满意吗？
+  </view>
+  <view class="food" wx:for="{{orderdetail.dishes}}" wx:key="dishId">
+    <view class="img">
+      <view class="image">
+        <image src="{{item.imageUrl}}" mode="aspectFill" />
+      </view>
+      <view class="info">
+        <view class="name">
+          {{item.dishName}}
+        </view>
+        <view class="category">
+          <view wx:for="{{item.category}}" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="food-rate">
+      <view class="taste">
+        <view class="rate-title">
+          评分
+        </view>
+        <van-rate value="{{ item.rate }}" size="{{ 25 }}" color="#ffd21e" void-icon="star" void-color="#eee" bind:change="onChange" data-index="{{index}}" />
+        <view class="rate-score">
+          {{item.rate}}.0分
+        </view>
+      </view>
+    </view>
+    <view class="text">
+      <textarea value="{{item.comment}}" placeholder="说说味道怎么样，给大家参考" maxlength="-1" bindblur="onBlur" data-index="{{index}}" />
+    </view>
+    <view class="uploaderImg" wx:if="{{item.rateImg.length}}" data-dishIndex="{{index}}" catchtap="onDelete">
+      <view class="uploaderImg-item" wx:for="{{item.rateImg}}" wx:key="size">
+        <image src="{{item}}" mode="aspectFill"/>
+        <view class="delete" bindtap="delete" data-index="{{index}}">
+          <van-icon name="cross" />
+        </view>
+      </view>
+    </view>
+
+    <view class="uploader" bindtap="uploader" data-index="{{index}}">
+      <view class="photo">
+        <van-icon name="photograph" size="25" />
+      </view>
+      <text>添加图片</text>
+    </view>
+  </view>
+</view>
+
+<!-- 提交 -->
+<view class="button">
+  <van-button type="info" size="large" icon="comment-o" round bind:click="onSubmit">提交</van-button>
+</view>

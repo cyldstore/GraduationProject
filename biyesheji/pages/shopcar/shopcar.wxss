@@ -1,0 +1,111 @@
+page {
+  padding-bottom: 50px;
+}
+
+.shopList {
+  width: 750px;
+}
+
+.shopList .shop-item {
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #ccc;
+  transition: all 0s ease;
+  margin-bottom: 10px;
+}
+
+.shopList .shop-item .left {
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.shopList .shop-item .left .radio {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: skyblue;
+}
+
+.shopList .shop-item .left .card {
+  display: flex;
+  width: 608rpx;
+  height: 100%;
+}
+
+.shopList .shop-item .left .card .img {
+  width: 130px;
+  height: 140px;
+  padding-left: 5px;
+  border-radius: 20px;
+  overflow: hidden;
+  align-self: center;
+}
+
+.shopList .shop-item .left .card .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.shopList .shop-item .left .card .info {
+  width: 338rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 10px;
+}
+
+.shopList .shop-item .left .card .info .name {
+  font-size: 20px;
+  color: skyblue;
+  font-style: italic;
+}
+
+.shopList .shop-item .left .card .info .des {
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shopList .shop-item .left .card .info .price {
+  font-size: 13px;
+  color: red;
+}
+
+.shopList .shop-item .left .card .info .price text {
+  font-size: 20px;
+}
+
+.shopList .shop-item .left .stepper {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.shopList .shop-item .right {
+  width: 50px;
+  height: 100%;
+  background-color: red;
+  position: relative;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 10px 10px 10px #ccc;
+}
+
+.shopList .shop-item .right .delete-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}

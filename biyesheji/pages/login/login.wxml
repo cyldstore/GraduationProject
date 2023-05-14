@@ -1,0 +1,41 @@
+<!--pages/login/login.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="用户登陆"></navigation-bar>
+
+<!-- 登陆 -->
+<view class="login" wx:if="{{statu === 'login'}}">
+  <view class="img">
+    <image src="/public/loginImg/chef.jpg" mode="aspectFill" />
+  </view>
+  <view class="text">
+    授权登陆
+  </view>
+  <view class="button">
+    <van-button type="primary" size="large" round color="pink" bind:click="onlogin">微信授权登陆</van-button>
+    <van-button type="primary" size="large" round color="#ccc" bind:click="noLogin">暂不登陆</van-button>
+  </view>
+</view>
+
+<!-- 设置头像和昵称 -->
+<view class="setNickName" wx:elif="{{statu === 'setNickName'}}">
+  <view class="title">
+    请设置头像昵称
+  </view>
+  <view class="block">
+    <text>头像</text>
+    <view class="avator">
+      <button open-type="chooseAvatar" bindchooseavatar="chooseavatar">
+        <image src="{{avatarUrl}}" mode="aspectFill"/>
+      </button>
+    </view>
+  </view>
+  <form bindsubmit="register">
+    <view class="block">
+    <text>昵称</text>
+    <input type="nickname" placeholder="请输入昵称" value="{{nickname}}" name="nickname"/>
+  </view>
+  <view class="nickbutton">
+    <button form-type="submit">确定</button>
+  </view>
+  </form>
+</view>

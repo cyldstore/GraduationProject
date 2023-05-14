@@ -1,0 +1,148 @@
+page{
+  padding-bottom: 50px;
+}
+
+.swiper {
+  width: 750rpx;
+  height: 200px;
+
+  swiper {
+    width: 100%;
+    height: 100%;
+
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.like{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  image{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.identity {
+  width: 90%;
+  height: 250px;
+  overflow: hidden;
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  box-shadow: 10px 10px 10px #ccc;
+  border-radius: 10px;
+
+  .chef {
+    margin: 10px;
+    height: 90px;
+    display: flex;
+
+    .avator {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      align-self: center;
+
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .info {
+      padding-left: 10px;
+      flex: 2;
+      border-right: 1px dashed black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .name {
+        font-size: 20px;
+      }
+
+      .styles {
+        display: flex;
+
+        .style-item {
+          padding: 0 3px;
+          color: cadetblue;
+        }
+      }
+
+      .price{
+        color: red;
+        font-size: 13px;
+        span{
+          margin-left: -6px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .grade {
+      flex: 1;
+      display: flex;
+
+      .score {
+        width: 60px;
+        border: 1px solid gold;
+        border-radius: 50px;
+        text-align: center;
+        margin: auto auto;
+      }
+    }
+  }
+
+  .imgShow {
+    width: 95%;
+    height: 95px;
+    margin: 0 auto;
+
+    swiper {
+      width: 100%;
+      height: 100%;
+
+      swiper-item {
+        image {
+          width: 90%;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+
+    }
+  }
+
+  .text {
+    margin-top: 15px;
+    padding-left: 10px;
+    color: gold;
+    letter-spacing: 1px;
+  }
+}
+
+.label{
+  position: relative;
+  margin-top: 160px;
+
+  .sticky{
+    width: 100%;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    z-index: 100;
+  }
+}
+
+

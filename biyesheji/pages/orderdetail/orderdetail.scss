@@ -1,0 +1,155 @@
+page{
+  padding-bottom: 10px;
+}
+
+.swiper{
+  width: 100%;
+  height: 200px;
+  swiper{
+    width: 100%;
+    height: 100%;
+    swiper-item{
+      overflow: hidden;
+      image{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.detail{
+  .state{
+    width: 95%;
+    height: 30px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #ccc;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;;
+  }
+
+  .state-info{
+    width: 95%;
+    margin: 10px auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #ccc;
+    .state-time{
+      margin-left: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #000;
+      text{
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+      .time{
+        font-size: 15px;
+        color: blue;
+      }
+    }
+    .state-option{
+      display: flex;
+      justify-content: space-around;
+      view{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: orange;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.shop{
+  width: 95%;
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #ccc;
+  .shop-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 120px;
+    .img{
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      margin: 10px;
+      border-radius: 10px;
+      image{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .shop-info{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .name{
+        font-size: 20px;
+        color: red;
+      }
+      .price{
+        color: gold;
+        text{
+          font-size: 20px;
+        }
+      }
+    }
+    .number {
+      min-width: 2em;
+      min-height: 2em;
+      line-height: 2em;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #ccc;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  .total{
+    border-top: 1px dashed #000;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    view{
+      text:first-child{
+        font-size: 14px;
+      }
+      text{
+        font-size: 20px;
+        color: red;
+      }
+    };
+  }
+}
+
+.user{
+  width: 95%;
+  margin: 10px auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px #ccc;
+  view{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    text:first-child{
+      font-size: 16px;
+      font-weight: 700;
+      width: 4em;
+      margin-right: 10px;
+    }
+    text:last-child{
+      text-align: right;
+    }
+  }
+}

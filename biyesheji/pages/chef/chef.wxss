@@ -1,0 +1,145 @@
+page {
+  padding-bottom: 50px;
+}
+
+.swiper {
+  width: 750rpx;
+  height: 200px;
+}
+
+.swiper swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.like {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+}
+
+.like image {
+  width: 100%;
+  height: 100%;
+}
+
+.identity {
+  width: 90%;
+  height: 250px;
+  overflow: hidden;
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  box-shadow: 10px 10px 10px #ccc;
+  border-radius: 10px;
+}
+
+.identity .chef {
+  margin: 10px;
+  height: 90px;
+  display: flex;
+}
+
+.identity .chef .avator {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  align-self: center;
+}
+
+.identity .chef .avator image {
+  width: 100%;
+  height: 100%;
+}
+
+.identity .chef .info {
+  padding-left: 10px;
+  flex: 2;
+  border-right: 1px dashed black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.identity .chef .info .name {
+  font-size: 20px;
+}
+
+.identity .chef .info .styles {
+  display: flex;
+}
+
+.identity .chef .info .styles .style-item {
+  padding: 0 3px;
+  color: cadetblue;
+}
+
+.identity .chef .info .price {
+  color: red;
+  font-size: 13px;
+}
+
+.identity .chef .info .price span {
+  margin-left: -6px;
+  font-size: 20px;
+}
+
+.identity .chef .grade {
+  flex: 1;
+  display: flex;
+}
+
+.identity .chef .grade .score {
+  width: 60px;
+  border: 1px solid gold;
+  border-radius: 50px;
+  text-align: center;
+  margin: auto auto;
+}
+
+.identity .imgShow {
+  width: 95%;
+  height: 95px;
+  margin: 0 auto;
+}
+
+.identity .imgShow swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.identity .imgShow swiper swiper-item image {
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.identity .text {
+  margin-top: 15px;
+  padding-left: 10px;
+  color: gold;
+  letter-spacing: 1px;
+}
+
+.label {
+  position: relative;
+  margin-top: 160px;
+}
+
+.label .sticky {
+  width: 100%;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  z-index: 100;
+}

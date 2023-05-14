@@ -1,0 +1,38 @@
+<!--pages/userinfo/userinfo.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="个人信息" isShow="{{false}}">
+  <van-icon name="arrow-left" size="25" bind:click="goBack" />
+</navigation-bar>
+
+<!-- 个人信息 -->
+<form bindsubmit="onSubmit">
+  <view class="avatar">
+    <image src="{{avatar}}" mode="" />
+  </view>
+  <view class="info">
+    <view class="nickname block">
+      <text>昵称</text>
+      <view class="input">
+        <input type="text" value="{{nickname}}" name="userName" />
+        <van-icon name="arrow" />
+      </view>
+    </view>
+    <view class="gender block">
+      <text>性别</text>
+      <view bindtap="onShow">
+        <view class="input">
+          <input type="text" value="{{gender}}" name="gender" />
+          <van-icon name="arrow" />
+        </view>
+      </view>
+    </view>
+    <view class="phone block">
+      <text>联系号码</text>
+      <view class="input">
+        <input type="number" value="{{phone}}" name="phone" />
+        <van-icon name="arrow" />
+      </view>
+    </view>
+  </view>
+  <button form-type="submit" type="primary">保存</button>
+</form>

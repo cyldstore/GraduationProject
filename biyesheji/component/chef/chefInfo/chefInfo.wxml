@@ -1,0 +1,12 @@
+<!--component/chef/chefInfo/chefInfo.wxml-->
+<view class="chefInfo">
+  <!-- 分割线 -->
+  <van-divider contentPosition="center" dashed customStyle="color: blue; border-color: #1989fa; font-size: 18px;">菜品介绍</van-divider>
+
+  <!-- 厨师简介 -->
+  <view class="desc">
+    <view class=" introduction">
+      {{introduction}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+<!--component/chef/chefScore/chefScore.wxml-->
+<view class="score">
+  <view class="grade">
+    <view class="scroe-item">
+      <view>
+        <span>综合评分</span>
+        <van-rate value="{{ value }}" allow-half void-icon="star" void-color="#eee" readonly />
+        <text>{{value}}分</text>
+      </view>
+    </view>
+  </view>
+  <view class="appraise">
+    <view class="appraise-item" wx:for="{{rate}}" wx:key="time">
+      <view class="user">
+        <view class="avator">
+          <image src="{{item.userAvatar}}" mode="aspectFill" />
+        </view>
+        <view class="user-info">
+          <view class="name">
+            {{item.userName}}
+          </view>
+          <view class="time">
+            {{item.time}}
+          </view>
+        </view>
+      </view>
+      <view class="user-score">
+        <view>
+          <van-rate value="{{item.rate}}" void-icon="star" void-color="#eee" readonly />
+        </view>
+        <span>{{item.rate}}.0分</span>
+      </view>
+      <view class="appraise-info">
+        {{item.comment}}
+      </view>
+      <view class="uploaderImg" wx:if="{{item.imgUrl.length}}">
+        <view class="uploaderImg-item" wx:for="{{item.imgUrl}}" wx:key="index">
+          <image src="{{item}}" mode="aspectFill" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

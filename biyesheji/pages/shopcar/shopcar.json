@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-stepper": "@vant/weapp/stepper/index"
+  },
+  "enablePullDownRefresh":true
+}

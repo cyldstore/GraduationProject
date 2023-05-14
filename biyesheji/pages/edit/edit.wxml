@@ -1,0 +1,44 @@
+<!--pages/edit/edit.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="{{option}}" isShow="{{false}}">
+  <van-icon name="arrow-left" size="25" bind:click="goBack" />
+</navigation-bar>
+
+<form bindsubmit="onSubmit">
+  <view class="editor">
+    <view class="name block">
+      <text>收货人</text>
+      <view class="input">
+        <input type="text" name="addressName" placeholder="名字" value="{{addressName}}" />
+      </view>
+    </view>
+    <view class="phone block">
+      <text>手机号码</text>
+      <view class="input">
+        <input type="number" name="phoneNumber" placeholder="手机号" value="{{phoneNumber}}" />
+      </view>
+    </view>
+    <view class="address block">
+      <text>所在地区</text>
+      <view class="input">
+        <input type="text" name="address" placeholder="省、市、区、街道" value="{{address}}" />
+        <view catchtap="getLocation">
+          <van-icon name="location-o" size="20"  style="margin-right: 5px;" />
+        </view>
+      </view>
+    </view>
+    <view class="detail-address block">
+      <text>详细地址</text>
+      <view class="textarea">
+        <textarea value="" name="detailAddress" placeholder="小区楼栋/乡村名称" value="{{detailAddress}}" />
+        <view  catchtap="toMap" class="icon">
+          <van-icon name="location-o" size="20" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="button">
+    <button form-type="submit" type="primary">{{option}}</button>
+  </view>
+</form>

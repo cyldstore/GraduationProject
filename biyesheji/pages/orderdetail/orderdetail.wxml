@@ -1,0 +1,95 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="订单详情" isShow="{{false}}">
+  <van-icon name="arrow-left" size="25" bind:click="goBack" />
+</navigation-bar>
+
+<!-- 订单轮播 -->
+<view class="swiper">
+  <swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}">
+    <swiper-item wx:for="{{orderDetail.dishes}}" wx:key="dishId">
+      <image src="{{item.imageUrl}}" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 订单详情 -->
+<!-- 预约时间 -->
+<view class="detail">
+  <view class="state">
+    {{orderDetail.status?'商家已接单':'商家未接单'}}
+    <van-icon name="arrow-down" />
+  </view>
+  <view class="state-info">
+    <view class="state-time">
+      <text>预约时间</text>
+      <view class="time">
+        {{orderDetail.orderTime}}
+      </view>
+    </view>
+    <view class="state-option">
+      <view class="Reminder" bindtap="reminder">
+        <van-icon name="bulb-o" size="30" color="orange" />
+        <text>催单</text>
+      </view>
+      <view class="certificate">
+        <view wx:if="{{!orderDetail.status}}" bindtap="cancelOrder">
+          <van-icon name="close" size="25" color="orange" />
+          <text>取消订单</text>
+        </view>
+        <view wx:if="{{orderDetail.status}}" bindtap="completeOrder">
+          <van-icon name="certificate" size="30" color="orange"/>
+          <text>确认完成</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 商品列表 -->
+<view class="shop">
+  <view class="shop-item" wx:for="{{orderDetail.dishes}}" wx:key="dishId">
+    <view class="img">
+      <image src="{{item.imageUrl}}" mode="aspectFill" />
+    </view>
+    <view class="shop-info">
+      <view class="name">
+        {{item.dishName}}
+      </view>
+      <view class="price">
+        ￥<text>{{item.price}}</text>
+      </view>
+    </view>
+    <view class="number">
+      <view>
+        x{{item.quantity}}
+      </view>
+    </view>
+  </view>
+  <view class="total">
+    <view>总计：
+      <text>￥</text>
+      <text>{{orderDetail.totalAmount}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 用户信息 -->
+<view class="user">
+  <view class="address">
+    <text>地址</text>
+    <text>{{orderDetail.address.useraddress+orderDetail.address.userdetailAddress}}</text>
+  </view>
+  <view class="name">
+    <text>姓名</text>
+    <text>{{orderDetail.address.userName}}</text>
+  </view>
+  <view class="phone">
+    <text>联系电话</text>
+    <text>{{orderDetail.address.userphone}}</text>
+  </view>
+  <view class="order-time">
+    <text>下单时间</text>
+    <text>{{orderDetail.orderTime}}</text>
+  </view>
+</view>

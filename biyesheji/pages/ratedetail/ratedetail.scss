@@ -1,0 +1,128 @@
+page {
+  padding-bottom: 10px;
+}
+
+.rate {
+  width: 95%;
+  margin: 10px auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #ccc;
+  overflow: hidden;
+
+
+  .title {
+    padding: 10px;
+    border-bottom: 1px dashed #000;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+
+    .time {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+
+  .food {
+    padding: 10px;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed #000;
+
+    .img {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+
+      .image {
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-right: 10px;
+
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .name {
+          font-size: 20px;
+          color: red;
+        }
+
+        .category {
+          font-size: 14px;
+
+          view {
+            border: 1px solid gold;
+            min-width: 3em;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50px;
+            padding: 0 2px;
+            margin-right: 5px;
+          }
+        }
+      }
+
+    }
+
+    .food-rate {
+      margin-top: 10px;
+
+      .taste {
+        display: flex;
+        align-items: center;
+
+        .rate-title {
+          margin-right: 20px;
+          padding-top: 10px;
+        }
+
+        .rate-score {
+          margin-left: 20px;
+          padding-top: 10px;
+          color: gold;
+        }
+      }
+    }
+
+    .text {
+      margin-top: 10px;
+      text-align: justify;
+    }
+
+    .uploaderImg {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 5px;
+
+      .uploaderImg-item {
+        width: 200rpx;
+        height: 200rpx;
+        overflow: hidden;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        position: relative;
+
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .uploaderImg-item:last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

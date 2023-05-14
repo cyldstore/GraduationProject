@@ -1,0 +1,51 @@
+<!--pages/rate/rate.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="评价详情" isShow="{{false}}">
+  <van-icon name="arrow-left" size="25" bind:click="goBack" />
+</navigation-bar>
+
+<view class="rate">
+  <view class="title">
+    您的评价详情
+    <view class="time">
+      {{ratedetail.time}}
+    </view>
+  </view>
+
+  <view class="food" wx:for="{{ratedetail.dishes}}" wx:key="dishId">
+    <view class="img">
+      <view class="image">
+        <image src="{{item.imageUrl}}" mode="aspectFill" />
+      </view>
+      <view class="info">
+        <view class="name">
+          {{item.dishName}}
+        </view>
+        <view class="category">
+          <view wx:for="{{item.category}}" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="food-rate">
+      <view class="taste">
+        <view class="rate-title">
+          评分
+        </view>
+        <van-rate value="{{ item.rate }}" size="{{ 25 }}" color="#ffd21e" void-icon="star" void-color="#eee" bind:change="onChange" data-index="{{index}}" readonly />
+        <view class="rate-score">
+          {{item.rate}}.0分
+        </view>
+      </view>
+    </view>
+    <view class="text">
+      {{item.comment}}
+    </view>
+    <view class="uploaderImg" wx:if="{{item.rateImg.length}}">
+      <view class="uploaderImg-item" wx:for="{{item.rateImg}}" wx:key="size">
+        <image src="{{item}}" mode="aspectFill" />
+      </view>
+    </view>
+  </view>
+</view>

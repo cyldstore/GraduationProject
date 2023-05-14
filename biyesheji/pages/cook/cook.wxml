@@ -1,0 +1,52 @@
+<!--pages/cook/cook.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="菜品选择"></navigation-bar>
+
+<!-- 搜索框 -->
+<view class="search">
+  <van-search placeholder="请输入搜索关键词" bind:click-input="onClick" disabled="{{true}}" shape="round" input-align="center" background="#f2f2f2" />
+</view>
+
+<!-- 下拉菜单 -->
+<van-dropdown-menu>
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="handleOrder" />
+</van-dropdown-menu>
+
+<!-- 商品列表 -->
+<view class="foodList">
+  <view class="food-item" bindtap="toChef" wx:for="{{dishes}}" wx:key="dishId" data-id="{{item.dishId}}">
+    <view class="img">
+      <image src="{{item.imageUrl[0]}}" mode="aspectFill" />
+    </view>
+    <view class="info">
+      <view class="name">
+        {{item.name}}
+      </view>
+      <view class="tags">
+        <view wx:for="{{item.category}}" wx:key="index">
+          {{item}}
+        </view>
+      </view>
+      <view class="description">
+        {{item.description}}
+      </view>
+      <view class="score">
+        <text>{{item.averageRating}}</text>分
+      </view>
+      <view class="price">
+        <text class="icon">￥</text>
+        <text>{{item.price}}</text>起
+      </view>
+      <view class="btn" catchtap="addCart" data-id="{{item.dishId}}">
+        +
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 商品导航 -->
+<van-goods-action>
+  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" info="{{shopNumber}}" />
+  <van-goods-action-button text="立即购买" bind:click="toShopCart"/>
+</van-goods-action>

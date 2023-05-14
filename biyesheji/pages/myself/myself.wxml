@@ -1,0 +1,52 @@
+<!--pages/myself/myself.wxml-->
+<navigation-bar title="我的" isShow="{{false}}">
+  <van-icon name="user-o" size="32"/>
+</navigation-bar>
+
+<!-- 头像 -->
+<view class="header">
+  <view class="avator">
+    <image src="{{avatar}}" mode="aspectFill"/>
+  </view>
+  <view class="name">
+    {{nickname}}
+  </view>
+</view>
+
+<!-- 用户信息 -->
+<view class="user block" bindtap="handleClick" data-name="userinfo">
+  个人信息
+  <view class="icon">
+    <van-icon name="arrow" />
+  </view>
+</view>
+<view class="address block" bindtap="handleClick" data-name="address">
+  地址信息
+  <view class="icon">
+    <van-icon name="arrow" />
+  </view>
+</view>
+<view class="like block" bindtap="handleClick" data-name="like">
+  我的收藏
+  <view class="icon">
+    <van-icon name="arrow" />
+  </view>
+</view>
+<view class="usercoupon block" bindtap="handleClick" data-name="usercoupon">
+  我的优惠券
+  <view class="icon">
+    <van-icon name="arrow" />
+  </view>
+</view>
+<view class="exit block" bindtap="exit">
+  退出登陆
+  <view class="icon">
+    <van-icon name="arrow" />
+  </view>
+</view>
+<view class="exit block" bindtap="logout">
+  注销
+  <view class="icon">
+    <van-icon name="arrow" />
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/coupon/coupon.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="优惠券"></navigation-bar>
+
+<!-- 优惠券列表 -->
+<view class="coupon">
+  <ul>
+    <li wx:for="{{couponData}}" wx:key="couponId">
+      <view class="coupon-item">
+        <view class="left">
+          <view class="price">
+            {{item.value}}<span>￥</span>
+          </view>
+          <view class="text">
+            满减券
+          </view>
+        </view>
+        <view class="middle">
+          <view class="restrict">
+            满{{item.couponCondition}}可用
+          </view>
+          <view class="message">
+            每人限领{{item.couponLimit}}张
+          </view>
+          <view class="date">
+            {{item.date}}
+          </view>
+        </view>
+        <view class="right" bindtap="onCoupons" data-id="{{item.couponId}}">
+          <text>立即领取</text>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>

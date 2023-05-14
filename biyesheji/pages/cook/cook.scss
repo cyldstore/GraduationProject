@@ -1,0 +1,115 @@
+page {
+  background-color: #ccc;
+  padding-bottom: 50px;
+}
+
+.foodList {
+  .food-item {
+    width: 95%;
+    height: 150px;
+    overflow: hidden;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .img {
+      width: 30%;
+      height: 90%;
+      margin-left: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex: 1;
+
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .info {
+      padding-left: 10px;
+      height: 100%;
+      display: flex;
+      flex: 2;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .name {
+        margin-top: 10px;
+        font-size: 20px;
+        color: red;
+      }
+
+      .tags {
+        display: flex;
+        font-size: 14px;
+
+        view {
+          min-width: 3em;
+          text-align: center;
+          margin-right: 10px;
+          display: inline-block;
+          padding: 0 5px;
+          border: 1px solid gold;
+          border-radius: 30px;
+        }
+      }
+
+      .description {
+        margin-top: 5px;
+        width: 70%;
+        font-size: 12px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        /* 指定显示文本的行数 */
+        overflow: hidden;
+        /* 超出隐藏 */
+        text-overflow: ellipsis;
+        /* 超出部分显示省略号 */
+      }
+
+      .score {
+        position: absolute;
+        right: 10px;
+
+        text {
+          font-size: 25px;
+          color: skyblue;
+        }
+      }
+
+      .price {
+        margin-bottom: 10px;
+        font-size: 14px;
+        letter-spacing: 1px;
+
+        text {
+          font-size: 20px;
+          color: red;
+        }
+
+        .icon {
+          font-size: 13px;
+        }
+      }
+
+      .btn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        background-color: gold;
+        border-radius: 5px;
+      }
+    }
+  }
+}

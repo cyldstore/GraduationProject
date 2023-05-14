@@ -1,0 +1,40 @@
+<!--pages/usercoupon/usercoupon.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="我的优惠券" isShow="{{false}}">
+  <van-icon name="arrow-left" size="25" bind:click="goBack" />
+</navigation-bar>
+
+<!-- 优惠券列表 -->
+<view class="coupon" wx:if="{{couponData.length}}">
+  <ul>
+    <li wx:for="{{couponData}}" wx:key="customerCouponId">
+      <view class="coupon-item">
+        <view class="left">
+          <view class="price">
+            {{item.value}}<span>￥</span>
+          </view>
+          <view class="text">
+            满减券
+          </view>
+        </view>
+        <view class="middle">
+          <view class="restrict">
+            满{{item.couponCondition}}可用
+          </view>
+          <view class="message">
+            每人限领{{item.couponLimit}}张
+          </view>
+          <view class="date">
+            X
+            <text>{{item.haveNumber}}</text>
+          </view>
+        </view>
+        <view class="right" bindtap="{{source=='pay'?'toPay':'toCook'}}" data-id="{{item.customerCouponId}}" data-index="{{index}}">
+          <text>使用</text>
+        </view>
+      </view>
+    </li>
+  </ul>
+</view>
+
+<van-empty description="还没有优惠券，赶紧去领取吧！" image="search" wx:if="{{!couponData.length}}"/>

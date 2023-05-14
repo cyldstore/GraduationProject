@@ -1,0 +1,209 @@
+@charset "UTF-8";
+page {
+  padding-bottom: 60px;
+}
+
+.user-info {
+  width: 95%;
+  height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.user-info .info {
+  width: 80%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-info .info .address {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* 指定显示文本的行数 */
+  overflow: hidden;
+  /* 超出隐藏 */
+  text-overflow: ellipsis;
+  /* 超出部分显示省略号 */
+}
+
+.user-info .info .contact {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.user-info .info .contact .name {
+  margin-right: 10px;
+}
+
+.user-info .info .contact .phone {
+  color: #ccc;
+}
+
+.time {
+  width: 95%;
+  height: 40px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.time .van-cell {
+  padding: 10px;
+}
+
+.time .van-cell .van-icon {
+  margin-right: 5px;
+  flex: 1;
+}
+
+.time .van-cell .van-cell__title {
+  font-size: 18px;
+  font-weight: 700;
+  flex: 2;
+}
+
+.time .van-cell .van-cell__value {
+  letter-spacing: 1px;
+  color: gold;
+  flex: 4;
+}
+
+.foodList {
+  width: 95%;
+  border-radius: 20px;
+  margin: 10px auto;
+  box-shadow: 5px 5px 5px #ccc;
+  overflow: hidden;
+}
+
+.foodList .food-item {
+  width: 95%;
+  height: 150px;
+  overflow: hidden;
+  margin: 10px auto 0;
+  border-bottom: 1px dashed #000;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.foodList .food-item .img {
+  width: 30%;
+  height: 90%;
+  margin-left: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.foodList .food-item .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.foodList .food-item .info {
+  padding-left: 10px;
+  height: 100%;
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.foodList .food-item .info .name {
+  margin-top: 10px;
+  font-size: 20px;
+  color: red;
+}
+
+.foodList .food-item .info .tags {
+  display: flex;
+  font-size: 14px;
+}
+
+.foodList .food-item .info .tags view {
+  min-width: 3em;
+  text-align: center;
+  margin-right: 10px;
+  display: inline-block;
+  padding: 0 5px;
+  border: 1px solid gold;
+  border-radius: 30px;
+}
+
+.foodList .food-item .info .description {
+  margin-top: 5px;
+  width: 70%;
+  font-size: 12px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* 指定显示文本的行数 */
+  overflow: hidden;
+  /* 超出隐藏 */
+  text-overflow: ellipsis;
+  /* 超出部分显示省略号 */
+}
+
+.foodList .food-item .info .price {
+  margin-bottom: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.foodList .food-item .info .price text {
+  font-size: 20px;
+  color: red;
+}
+
+.foodList .food-item .info .number {
+  letter-spacing: 1px;
+  min-width: 2em;
+  min-height: 2em;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #ccc;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.coupon {
+  width: 95%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.coupon view:first-child {
+  margin-left: 5px;
+}
+
+.coupon view:first-child text {
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.coupon view:last-child {
+  color: orange;
+}

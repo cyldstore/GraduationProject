@@ -1,0 +1,82 @@
+<!--pages/pay/pay.wxml-->
+<!-- 支付页面 -->
+<view class="order">
+  <!-- 头部导航栏 -->
+  <navigation-bar title="提交订单" isShow="{{false}}">
+    <van-icon name="arrow-left" size="25" bind:click="goBack" />
+  </navigation-bar>
+
+  <!-- 用户信息 -->
+  <view class="user-info">
+    <view class="icon">
+      <van-icon name="location" size="25" color="skyblue" />
+    </view>
+    <view class="info">
+      <view class="address">
+        {{address.address+address.detailAddress || '请添加地址信息'}}
+      </view>
+      <view class="contact">
+        <text class="name">{{address.addressName}}</text>
+        <text class="phone">{{address.phoneNumber}}</text>
+      </view>
+    </view>
+    <view class="arrow" catchtap="toSelect" data-name="address">
+      <van-icon name="arrow" />
+    </view>
+  </view>
+
+  <!-- 预约时间 -->
+  <view class="time">
+    <van-cell title="预约时间：" is-link value="{{ time }}" bind:click="showPopup">
+      <van-icon name="clock-o" slot="icon" size="20" color="skyblue" />
+    </van-cell>
+    <van-popup show="{{ showPopup }}" position="bottom" custom-style="height: 50%" z-index="1000" round="{{true}}">
+      <van-picker columns="{{ columns }}" value="{{ pickerValue }}" bind:confirm="onConfirm" title="选择预约时间" bind:cancel="onCancel" show-toolbar bind:change="onChange" />
+    </van-popup>
+  </view>
+
+  <!-- 订单信息 -->
+  <view class="foodList">
+    <view class="food-item" bindtap="toChef" wx:for="{{dishes}}" wx:key="dishId" data-id="{{item.dishId}}">
+      <view class="img">
+        <image src="{{item.imageUrl[0]}}" mode="aspectFill" />
+      </view>
+      <view class="info">
+        <view class="name">
+          {{item.name}}
+        </view>
+        <view class="tags">
+          <view wx:for="{{item.category}}" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+        <view class="description">
+          {{item.description}}
+        </view>
+        <view class="price">
+          <text class="icon">￥</text>
+          <text>{{item.price}}</text>
+        </view>
+        <view class="number">
+          <view>
+            x{{item.quantity}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 优惠券 -->
+  <view class="coupon">
+    <view>
+      <van-icon name="coupon-o" size="20" color="gold" />
+      <text>优惠券</text>
+    </view>
+    <view catchtap="toSelect" data-name="usercoupon">
+      {{couponContent}}
+      <van-icon name="arrow" color="#000" />
+    </view>
+  </view>
+
+  <!-- 支付 -->
+  <van-submit-bar price="{{ totalPrice }}" button-text="立即支付" bind:submit="onSubmit" />
+</view>

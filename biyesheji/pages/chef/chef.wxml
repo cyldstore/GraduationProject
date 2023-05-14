@@ -1,0 +1,85 @@
+<!--pages/chef/chef.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="菜品详情" isShow="{{false}}">
+  <van-icon name="arrow-left" size="25" bind:click="goBack" />
+</navigation-bar>
+
+<!-- 头部轮播 -->
+<view class="swiper">
+  <swiper autoplay="{{true}}" circular="{{true}}">
+    <swiper-item wx:for="{{dishData.imageUrl}}" wx:key="index">
+      <image src="{{item}}" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 收藏图标 -->
+<view class="like" catchtap="shouCang">
+  <image src="{{isShouCang?'/public/iconLike/shoucang_select.png' : '/public/iconLike/shoucang.png'}}" mode="aspectFill" />
+</view>
+
+<!-- 厨师铭牌 -->
+<view class="identity">
+  <view class="chef">
+    <view class="avator">
+      <image src="{{dishData.imageUrl[0]}}" mode="aspectFill" />
+    </view>
+    <view class="info">
+      <view class="name">
+        {{dishData.name}}
+      </view>
+      <view class="styles">
+        <view class="style-item" wx:for="{{dishData.category}}" wx:key="index">
+          {{item}}
+        </view>
+      </view>
+      <view class="price">
+        ￥
+        <span>{{dishData.price}}</span>
+      </view>
+    </view>
+    <view class="grade">
+      <view class="score">
+        {{dishData.averageRating}}分
+      </view>
+    </view>
+  </view>
+  <view class="imgShow">
+    <swiper display-multiple-items="2.5">
+      <swiper-item wx:for="{{dishData.imageUrl}}" wx:key="index">
+        <image src="{{item}}" mode="aspectFill" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="text">
+    *请提前4小时预约厨师上门服务
+  </view>
+</view>
+
+<!-- 详情信息 -->
+<view class="label">
+  <!-- 标签栏 -->
+  <view class="{{isSticky? 'sticky' : 'tabs'}}" bindtap="classChange" id="label">
+    <van-tabs type="card" color="blue" animated="true" swipeable="true" bind:click="onClick">
+      <van-tab title="菜品信息"></van-tab>
+      <van-tab title="评价和口碑"></van-tab>
+    </van-tabs>
+  </view>
+
+  <!-- 厨师信息 -->
+  <view class="info" wx:if="{{showId === 0}}">
+    <chef-info introduction="{{dishData.description}}"></chef-info>
+  </view>
+
+  <!-- 评价和口碑 -->
+  <view class="score" wx:else>
+    <chef-score value="{{dishData.averageRating}}" rate="{{rate}}"></chef-score>
+  </view>
+</view>
+
+<!-- 提交订单栏 -->
+<van-goods-action>
+  <van-goods-action-icon icon="cart-o" text="购物车" info="{{shopNumber}}" bind:click="toShopCart"/>
+  <van-goods-action-button color="#be99ff" text="加入购物车" type="warning" bind:click="addCart" />
+  <van-goods-action-button color="#7232dd" text="立即购买" bind:click="toPay" data-id="{{dishData.dishId}}"/>
+</van-goods-action>

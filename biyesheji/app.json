@@ -1,0 +1,73 @@
+{
+  "pages": [
+      "pages/index/index",
+      "pages/shopcar/shopcar",
+      "pages/order/order",
+      "pages/myself/myself",
+      "pages/search/search",
+      "pages/cook/cook",
+      "pages/personal/personal",
+      "pages/coupon/coupon",
+      "pages/chef/chef",
+      "pages/pay/pay",
+      "pages/orderdetail/orderdetail",
+      "pages/rate/rate",
+      "pages/ratedetail/ratedetail",
+      "pages/userinfo/userinfo",
+      "pages/address/address",
+      "pages/like/like",
+      "pages/usercoupon/usercoupon",
+      "pages/login/login",
+      "pages/edit/edit"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
+  },
+  "tabBar": {
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "public/tabBarImg/home.png",
+        "selectedIconPath": "public/tabBarImg/home_light.png"
+      },
+      {
+        "pagePath": "pages/shopcar/shopcar",
+        "text": "购物车",
+        "iconPath": "public/tabBarImg/shopcar.png",
+        "selectedIconPath": "public/tabBarImg/shopcar_light.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "public/tabBarImg/dingdan.png",
+        "selectedIconPath": "public/tabBarImg/dingdan_light.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "iconPath": "public/tabBarImg/my.png",
+        "selectedIconPath": "public/tabBarImg/my_light.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "navigation-bar": "/component/navigationBar/navigationBar"
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    },
+    "scope.userFuzzyLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "requiredPrivateInfos": ["getFuzzyLocation", "chooseLocation"],
+  "lazyCodeLoading": "requiredComponents"
+}

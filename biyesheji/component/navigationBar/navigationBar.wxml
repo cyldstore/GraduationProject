@@ -1,0 +1,15 @@
+<!--component/navigationBar/navigationBar.wxml-->
+<view class="container">
+  <view class="left">
+    <!-- isShow 是否显示返回图标 -->
+    <view class="icon" bindtap="onClick" wx:if="{{isShow}}">
+      <van-icon name="arrow-left" size="25"/>
+      <van-icon name="wap-home-o" size="25"/>
+    </view>
+    <slot></slot>
+  </view>
+  <!-- title 头部导航栏标题 -->
+ <text> {{title}}</text>
+</view>
+<!-- 头部固定定位脱离文档流，利用无内容盒子撑开高度-->
+<view class="box"></view>

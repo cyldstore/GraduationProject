@@ -1,0 +1,26 @@
+<!--component/order/order.wxml-->
+<view class="order" wx:for="{{orders}}" wx:key="orderId" bindtap="{{item.status !==2 ?'toOrderDetail':item.isComment?'toRateDetail':'toRate'}}" data-id="{{item.orderId}}">
+  <view class="img">
+    <image src="{{item.imageUrl}}" mode="aspectFill" />
+  </view>
+  <view class="info">
+    <view class="name">
+      {{item.title}}
+    </view>
+    <view class="createtime">
+      下单时间：{{item.createTime}}
+    </view>
+    <view class="ordertime">
+      预约时间：{{item.orderTime}}
+    </view>
+    <view class="price">
+      ￥<text>{{item.totalAmount}}</text>
+    </view>
+  </view>
+  <view class="state" style="color: {{color}};">
+    {{item.isComment === 1?'已评价':state}}
+  </view>
+  <view class="icon">
+    <van-icon name="{{icon}}" size="30" color="{{color}}" />
+  </view>
+</view>

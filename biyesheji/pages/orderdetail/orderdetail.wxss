@@ -1,0 +1,173 @@
+page {
+  padding-bottom: 10px;
+}
+
+.swiper {
+  width: 100%;
+  height: 200px;
+}
+
+.swiper swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper swiper swiper-item {
+  overflow: hidden;
+}
+
+.swiper swiper swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.detail .state {
+  width: 95%;
+  height: 30px;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #ccc;
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.detail .state-info {
+  width: 95%;
+  margin: 10px auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.detail .state-info .state-time {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #000;
+}
+
+.detail .state-info .state-time text {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.detail .state-info .state-time .time {
+  font-size: 15px;
+  color: blue;
+}
+
+.detail .state-info .state-option {
+  display: flex;
+  justify-content: space-around;
+}
+
+.detail .state-info .state-option view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: orange;
+  font-size: 14px;
+}
+
+.shop {
+  width: 95%;
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.shop .shop-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 120px;
+}
+
+.shop .shop-item .img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.shop .shop-item .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.shop .shop-item .shop-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.shop .shop-item .shop-info .name {
+  font-size: 20px;
+  color: red;
+}
+
+.shop .shop-item .shop-info .price {
+  color: gold;
+}
+
+.shop .shop-item .shop-info .price text {
+  font-size: 20px;
+}
+
+.shop .shop-item .number {
+  min-width: 2em;
+  min-height: 2em;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #ccc;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.shop .total {
+  border-top: 1px dashed #000;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.shop .total view text:first-child {
+  font-size: 14px;
+}
+
+.shop .total view text {
+  font-size: 20px;
+  color: red;
+}
+
+.user {
+  width: 95%;
+  margin: 10px auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px #ccc;
+}
+
+.user view {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user view text:first-child {
+  font-size: 16px;
+  font-weight: 700;
+  width: 4em;
+  margin-right: 10px;
+}
+
+.user view text:last-child {
+  text-align: right;
+}

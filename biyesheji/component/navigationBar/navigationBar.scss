@@ -1,0 +1,33 @@
+.container{
+  width: 750rpx;
+  height:75px;
+  // background-color:#0dc441;
+  // background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  .left{
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    .icon{
+      width: 60px;
+      height: 32px;
+      background-color: #fff;
+      display: flex;
+      border-radius: 30px;
+    }
+  }
+  text{
+    position: absolute;
+    left: 50%;
+    bottom:9px;
+    transform: translateX(-50%);
+    font-size: 18px;
+  }
+}
+.box{
+  width: 750rpx;
+  height: 75px;
+}

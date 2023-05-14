@@ -1,0 +1,117 @@
+page{
+  padding-bottom: 50px;
+}
+
+.score {
+  width: 90%;
+  margin: 10px auto;
+  box-shadow: 5px 5px 5px #ccc;
+
+  .scroe-item {
+    position: relative;
+
+    span {
+      width: 5em;
+      padding: 2px;
+      text-align-last: justify;
+      letter-spacing: 1px;
+      margin-right: 10px;
+    }
+
+    text {
+      position: absolute;
+      right: 15px;
+      top: 2px;
+      font-size: 20px;
+      color: red;
+      font-style: italic;
+    }
+  }
+
+  .appraise {
+    width: 100%;
+    // background-color: #F5F5F5;
+    margin: 10px auto;
+
+    .appraise-item {
+      border-bottom: 1px dashed black;
+      margin-top: 10px;
+
+      .user {
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        display: flex;
+
+        .avator {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .user-info {
+          padding-left: 10px;
+
+          .name {
+            font-size: 18px;
+            font-weight: 700;
+          }
+
+          .time {
+            font-size: 13px;
+            color: #ccc;
+          }
+        }
+      }
+
+      .user-score {
+        display: flex;
+
+        span {
+          padding-left: 10px;
+          padding-top: 8px;
+          color: black;
+          font-size: 13px;
+        }
+      }
+
+      .appraise-info {
+        padding: 10px;
+        text-align: justify;
+        text-indent: 2em;
+      }
+
+      .uploaderImg {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5px;
+  
+        .uploaderImg-item {
+          width: 200rpx;
+          height: 200rpx;
+          overflow: hidden;
+          margin-left: 5px;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          position: relative;
+  
+          image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+  
+        .uploaderImg-item:last-child {
+          margin-right: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

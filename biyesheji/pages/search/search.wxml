@@ -1,0 +1,29 @@
+<!--pages/search/search.wxml-->
+<!-- 头部导航栏 -->
+<navigation-bar title="搜索" isShow="{{false}}">
+  <van-icon name="arrow-left" size="25" bind:click="goBack" />
+</navigation-bar>
+
+<!-- 搜索框 -->
+<view>
+  <!-- <mp-searchbar focus="{{true}}" placeholder="请输入搜索关键词"></mp-searchbar> -->
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bind:search="onSearch" shape='round' />
+  <van-empty description="暂无数据" image="search" wx:if="{{isShow}}" />
+  <!-- 搜索结果 -->
+  <view class="search-list" wx:if="{{!isShow}}">
+    <view wx:for="{{searchResult}}" wx:key="index" class="search-item" bindtap="toChef" data-id="{{item.dishId}}">
+      <view class="search-item-left">
+        <image class="search-item-image" src="{{item.imageUrl[0]}}" />
+      </view>
+      <view class="search-item-right">
+        <view class="search-item-title">
+          <rich-text nodes="{{item.name}}" wx:parse="{{true}}" space="ensp" />
+        </view>
+        <view class="search-item-info">
+          <text class="search-item-category">{{item.category}}</text>
+          <rich-text nodes="{{item.description}}" class="search-item-description"/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
