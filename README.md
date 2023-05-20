@@ -16,7 +16,7 @@
 
 #### （1）打开MySQL WorkBench，连接本地数据库
 
-<img src="https://github.com/cyldstore/GraduationProject/blob/master/picture/image-20230520200244887.png" alt="连接本地数据库" title="连接本地数据库"/>
+![image] (https://github.com/cyldstore/GraduationProject/blob/master/picture/image-20230520200244887.png)
 
 <p>输入前面设置的登录密码</p>
 
