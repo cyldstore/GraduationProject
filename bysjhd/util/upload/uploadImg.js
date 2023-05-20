@@ -2,7 +2,7 @@ const multer = require('multer')
 
 const foodsStore = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'C:/wwwroot/cyldwz.cn/dist/bysjhd/public/images/foods')
+        cb(null, 'public/images/foods')
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname)
@@ -11,7 +11,7 @@ const foodsStore = multer.diskStorage({
 
 const swiperStore = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'C:/wwwroot/cyldwz.cn/dist/bysjhd/public/images/swiper')
+        cb(null, 'public/images/swiper')
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname)

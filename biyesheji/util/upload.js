@@ -6,7 +6,7 @@ function upload(parmas,isHeader=false) {
     const token = wx.getStorageSync('token').newToken
     wx.uploadFile({
       ...parmas,
-      url:"https://cyldwz.cn/api/xcx" + parmas.url,
+      url:"http://localhost:3000/api/xcx" + parmas.url,
       header:{
         "Authorization":'Bearer ' + token
       },

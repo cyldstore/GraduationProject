@@ -54,15 +54,15 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    // 获取定位
+    this.getLocation()
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    // 获取定位
-    this.getLocation()
+    
   },
 
   /**
@@ -246,7 +246,8 @@ Page({
       success: (res) => {
         console.log(res)
         this.setData({
-          detailAddress: res.name
+          detailAddress: res.name,
+          address:res.address
         })
       }
     })

@@ -11,7 +11,7 @@ function uploadFiles(params, isHeader = false) {
           wx.uploadFile({
             ...params,
             filePath: params.filePath[i],
-            url: "https://cyldwz.cn/api/xcx" + params.url,
+            url: "http://localhost:3000/api/xcx" + params.url,
             header: {
               "Authorization": 'Bearer ' + token
             },

@@ -73,7 +73,7 @@ function verify(req, res, next) {
 function avatarupload(req, res, next) {
     const imgUrl = []
     req.files.forEach(item => {
-        imgUrl.push(item.path.replace(/\\/g, '/').replace('C:/wwwroot/cyldwz.cn/dist/bysjhd/public', 'https://cyldwz.cn/api/bysjImg'))
+        imgUrl.push(item.path.replace(/\\/g, '/').replace('public', 'http://127.0.0.1:3000/'))
     })
     res.send(imgUrl)
 }
@@ -388,7 +388,7 @@ function orderRate(req, res, next) {
 
 // 评价图片上传
 function uploadRateImg(req, res, next) {
-    const imgUrl = req.files[0].path.replace(/\\/g, '/').replace('C:/wwwroot/cyldwz.cn/dist/bysjhd/public', 'https://cyldwz.cn/api/bysjImg')
+    const imgUrl = req.files[0].path.replace(/\\/g, '/').replace('public', 'http://127.0.0.1:3000/')
     res.send(imgUrl)
 }
 

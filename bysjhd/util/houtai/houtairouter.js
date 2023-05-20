@@ -31,7 +31,7 @@ function login(req, res, next) {
 function upload(req, res, next) {
     const imgUrl = []
     req.files.forEach(item => {
-        imgUrl.push(item.path.replace(/\\/g, '/').replace('C:/wwwroot/cyldwz.cn/dist/bysjhd/public', 'https://cyldwz.cn/api/bysjImg'))
+        imgUrl.push(item.path.replace(/\\/g, '/').replace('public', 'http://127.0.0.1:3000/'))
     })
     res.send(imgUrl)
 }
@@ -100,7 +100,7 @@ function swiper(req, res, next) {
 
 // 轮播图页面数据添加
 function swiperupload(req, res, next) {
-    let imgUrl = req.files[0].path.replace(/\\/g, '/').replace('C:/wwwroot/cyldwz.cn/dist/bysjhd/public', 'https://cyldwz.cn/api/bysjImg')
+    let imgUrl = req.files[0].path.replace(/\\/g, '/').replace('public', 'http://127.0.0.1:3000/')
     console.log(imgUrl)
     houtaidb.swiperuploadDb(imgUrl).then(resolve => {
         res.send({ status: 0, messages: "添加成功" })
