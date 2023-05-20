@@ -3,7 +3,7 @@ import router from '@/router'
 import store from '../store/index'
 
 const http = axios.create({
-  baseURL: 'https://cyldwz.cn/api/houtai'
+  baseURL: 'https://localhost:3000/api/houtai'
 })
 
 // axios请求拦截
