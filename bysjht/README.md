@@ -1,24 +1,15 @@
-# bysjht
+# 后台管理系统
 
-## Project setup
-```
-yarn install
-```
+## 一、安装依赖
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+`npm install`
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## 二、运行项目
 
-### Lints and fixes files
-```
-yarn lint
-```
+`npm run server`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 三、其它命令
+
+`npm run build` :构建生产环境的项目文件
+
+`npm run lint`: 运行ES
