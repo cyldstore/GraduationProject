@@ -16,19 +16,19 @@
 
 #### （1）打开MySQL WorkBench，连接本地数据库
 
-![image] (https://raw.githubusercontent.com/cyldstore/GraduationProject/master/picture/image-20230520200302500.png)
+<img src="https://raw.githubusercontent.com/cyldstore/GraduationProject/master/picture/image-20230520200302500.png">
 
 <p>输入前面设置的登录密码</p>
 
-![image] (https://github.com/cyldstore/GraduationProject/blob/master/picture/image-20230520200404175.png)
+<img src="https://raw.githubusercontent.com/cyldstore/GraduationProject/master/picture/image-20230520200404175.png">
 
 #### （2）新建schema
 
-![image] (https://github.com/cyldstore/GraduationProject/blob/master/picture/image-20230520202651633.png)
+<img src="https://raw.githubusercontent.com/cyldstore/GraduationProject/master/picture/image-20230520202651633.png">
 
 #### （3）导入my_bysj_db.sql文件
 
-![image] (https://github.com/cyldstore/GraduationProject/blob/master/picture/image-20230520203532760.png)
+<img src="https://raw.githubusercontent.com/cyldstore/GraduationProject/master/picture/image-20230520203532760.png">
 
 ### 4、安装VS Code
 
